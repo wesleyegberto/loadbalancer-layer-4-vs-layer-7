@@ -1,0 +1,15 @@
+{
+  "name": "load-balancer-layer-4-vs-layer-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-one.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

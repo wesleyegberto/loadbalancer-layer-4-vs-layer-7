@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  serverone:
+    build: ./server/
+    networks:
+      - lb-net
+    ports:
+      - 4444:4444
+    environment:
+      PORT: 4444
+
+  servertwo:
+    build: ./server/
+    networks:
+      - lb-net
+    ports:
+      - 5555:5555
+    environment:
+      PORT: 5555
+
+  lb_layer_4:
+    image: haproxy:2.3
+    networks:
+      - lb-net
+    volumes:
+      - ./lb-layer-4.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    ports:
+      - 8080:8080
+
+  lb_layer_7:
+    image: haproxy:2.3
+    networks:
+      - lb-net
+    volumes:
+      - ./lb-layer-7.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    ports:
+      - 9090:9090
+
+networks:
+  lb-net:
+    driver: bridge
