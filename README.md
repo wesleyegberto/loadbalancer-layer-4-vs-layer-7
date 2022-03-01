@@ -23,7 +23,7 @@ Algoritmos de balanceamento:
 
 O LB pode atuar nas camadas 4 e 7 do modelo OSI.
 
-## Layer 4
+### Layer 4
 
 O LB atua apenas na camada de transporte, tomando decisões apenas em TCP e UDP.
 Não enxerga o conteúdo da requisição, apenas redireciona para o servidor de destino alterando o IP (NAT).
@@ -42,7 +42,7 @@ Contras:
 - não aplicável para microservices
 - sem é cacheável
 
-## Layer 7
+### Layer 7
 
 O LB atua na camada de aplicação, podendo tomar decisões baseadas no TCP, UDP ou no protocolo da aplicação (HTTP, SSL, etc).
 Para cada requisição que ele recebe, é criado uma nova conexão para o servidor de destino, tendo assim duas conexões para cada cliente.
