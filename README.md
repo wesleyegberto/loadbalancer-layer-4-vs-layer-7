@@ -40,7 +40,7 @@ Contras:
 
 - LB não é inteligente
 - não aplicável para microservices
-- sem é cacheável
+- não é cacheável
 
 ### Layer 7
 
